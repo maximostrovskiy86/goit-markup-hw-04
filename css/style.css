@@ -44,7 +44,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
@@ -86,6 +86,7 @@ body {
 .contact .contact-item .email-icon,
 .contact .contact-item .tel-icon {
     margin-right: 10px;
+    fill: var(--svg-color);
 }
 
 ul.nav a.current,
@@ -95,9 +96,16 @@ ul.nav a:focus {
     transition: color 0.2s ease-in;
 }
 
+.contact .contact-item a:hover .email-icon,
+.contact .contact-item a:focus .email-icon,
+.contact .contact-item a:hover .tel-icon,
+.contact .contact-item a:focus .tel-icon {
+    fill: var(--accent-color);
+    transition: all 0.15s ease-in;
+}
+
 .contact .contact-item a:hover,
 .contact .contact-item a:focus {
-    fill: var(--accent-color);
     color: var(--accent-color);
     transition: all 0.15s ease-in;
 }
@@ -135,6 +143,9 @@ ul.nav a {
 }
 
 .section.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 1600px;
     height: 600px;
     margin: 0 auto;
@@ -153,7 +164,6 @@ ul.nav a {
 }
 
 .home .button {
-    margin-top: 30px;
     padding: 10px 32px;
 
     font-weight: 700;
@@ -169,7 +179,13 @@ ul.nav a {
     cursor: pointer;
 }
 
+.home .button:hover {
+    background-color: #188CE8;
+}
+
 .home h1 {
+    max-width: 660px;
+    margin-bottom: 30px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.41;
@@ -323,7 +339,7 @@ h2 {
 .filters {
     display: flex;
     justify-content: center;
-    margin-bottom: 34px;
+    margin-bottom: 50px;
 }
 
 .filters > .item + .item {
@@ -472,18 +488,17 @@ h2 {
     margin-top: 9px;
 }
 
-.footer .contact li + li,
-.footer .contact {
+.footer .footer-list li + li {
     margin-top: 9px;
 }
 
-.footer .contact a {
+.footer-list li + li a {
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.6);
 }
 
-.footer .contact a:hover,
-.footer .contact a:focus {
+.footer-list li + li a:hover,
+.footer-list li + li a:focus {
     color: var(--white-color);
     transition: color 0.2s ease-in;
 }
