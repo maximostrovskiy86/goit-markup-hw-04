@@ -86,7 +86,7 @@ body {
 .contact .contact-item .email-icon,
 .contact .contact-item .tel-icon {
     margin-right: 10px;
-    fill: var(--svg-color);
+    fill: var(--text-color);
 }
 
 ul.nav a.current,
